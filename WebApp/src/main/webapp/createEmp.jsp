@@ -4,43 +4,69 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Create Employee</title>
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
 </head>
-<body>
+<body class="bg-light">
 
-		<form action="FirstServlet" method="post">
+<div class="container mt-5">
 
-    <label>First Name:</label>
-    <input type="text" name="fname" placeholder="Enter First Name" required>
-    <br><br>
+    <div class="card shadow">
+        <div class="card-header bg-primary text-white">
+            <h3 class="mb-0">Create Employee</h3>
+        </div>
 
-    <label>Last Name:</label>
-    <input type="text" name="lname" placeholder="Enter Last Name" required>
-    <br><br>
+        <div class="card-body">
 
-    <label>Email:</label>
-    <input type="email" name="email" placeholder="Enter Email" required>
-    <br><br>
+            <form action="FirstServlet" method="post">
 
-    <label>Phone:</label>
-    <input type="text" name="phone" placeholder="Enter Phone Number" required>
-    <br><br>
+                <div class="mb-3">
+                    <label class="form-label">First Name</label>
+                    <input type="text" name="fname" class="form-control" placeholder="Enter First Name" required>
+                </div>
 
-    <label>Department:</label>
-    <input type="text" name="department" placeholder="Enter Department">
-    <br><br>
+                <div class="mb-3">
+                    <label class="form-label">Last Name</label>
+                    <input type="text" name="lname" class="form-control" placeholder="Enter Last Name" required>
+                </div>
 
-    <label>Designation:</label>
-    <input type="text" name="designation" placeholder="Enter Designation">
-    <br><br>
+                <div class="mb-3">
+                    <label class="form-label">Email</label>
+                    <input type="email" name="email" class="form-control" placeholder="Enter Email" required>
+                </div>
 
-    <label>Salary:</label>
-    <input type="number" name="salary" placeholder="Enter Salary" required>
-    <br><br>
+                <div class="mb-3">
+                    <label class="form-label">Phone</label>
+                    <input type="text" name="phone" class="form-control" placeholder="Enter Phone Number" required>
+                </div>
 
-    <button type="submit">Save Employee</button>
-</form>
-		
+                <div class="mb-3">
+                    <label class="form-label">Department</label>
+                    <input type="text" name="department" class="form-control" placeholder="Enter Department">
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Designation</label>
+                    <input type="text" name="designation" class="form-control" placeholder="Enter Designation">
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Salary</label>
+                    <input type="number" name="salary" class="form-control" placeholder="Enter Salary" required>
+                </div>
+
+                <button type="submit" class="btn btn-success">Save Employee</button>
+                <a href="home.jsp" class="btn btn-secondary ms-2">Back</a>
+
+            </form>
+
+        </div>
+    </div>
+
+</div>
 
 </body>
 </html>
