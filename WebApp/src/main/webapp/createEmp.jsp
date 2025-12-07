@@ -11,6 +11,7 @@
 
 </head>
 <body class="bg-light">
+	<%@ include file="header.jsp" %>
 
 <div class="container mt-5">
 
@@ -20,10 +21,6 @@
         
         <h3 class="mb-0">Create Employee</h3>
         
-        <a href="HomePage.jsp" class="btn btn-light btn-sm">
-            <i class="bi bi-house-fill"></i> Home
-        </a>
-
     </div>
 </div>
 

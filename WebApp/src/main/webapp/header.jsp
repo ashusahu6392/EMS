@@ -2,13 +2,13 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 
 <!-- top dark strip with centered app name (matches your screenshot) -->
-<nav class="navbar navbar-dark bg-dark">
-  <div class="container">
-    <span class="navbar-text mx-auto fw-semibold">
+<div class="bg-dark">
+  <div class="container text-center py-1">
+    <span class="text-light small fw-semibold" style="letter-spacing:0.6px;">
       Employee Management System
     </span>
   </div>
-</nav>
+</div>
 
 <!-- main navigation bar -->
 <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
