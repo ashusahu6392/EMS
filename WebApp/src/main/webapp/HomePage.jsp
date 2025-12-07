@@ -55,6 +55,33 @@
         </div>
 
     </div>
+    
+    <%
+    String msg = request.getParameter("msg");
+%>
+
+<% if ("success".equals(msg)) { %>
+
+<div id="successMsg" class="alert alert-success alert-dismissible fade show" role="alert"
+     style="max-width: 400px;">
+    <strong>Success!</strong> Employee saved successfully.
+</div>
+
+<script>
+    // Auto-hide after 2 seconds
+    setTimeout(function() {
+        var alertBox = document.getElementById("successMsg");
+        if (alertBox) {
+            // Bootstrap fade-out effect
+            alertBox.classList.remove("show");
+            alertBox.classList.add("hide");
+            setTimeout(() => alertBox.style.display = "none", 500); // wait for fade transition
+        }
+    }, 2000);
+</script>
+
+<% } %>
+    
 
 </body>
 </html>
