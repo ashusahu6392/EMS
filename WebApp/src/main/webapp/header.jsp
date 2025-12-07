@@ -46,7 +46,11 @@
         </li>
       </ul>
 
-    
+      <!-- right side: user / help -->
+      <div class="d-flex align-items-center">
+        <a class="btn btn-outline-secondary btn-sm me-2" href="contact.jsp">
+          <i class="bi bi-envelope-fill me-1"></i>Contact
+        </a>
 
         <div class="dropdown">
           <a class="btn btn-outline-dark btn-sm dropdown-toggle" href="#" role="button" id="userMenu" data-bs-toggle="dropdown"
