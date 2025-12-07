@@ -46,20 +46,16 @@ public class FirstServlet extends HttpServlet {
 		employee.setDesignation(designation);
 		
 		Transaction transaction = null;
-		PrintWriter out = resp.getWriter();
 		
 		
 		try(Session session = HibernateUtil.getSessionFactory().openSession() ){
 			transaction = session.beginTransaction();
 			session.persist(employee);
 			transaction.commit();
-			out.println("Employee Data Saved Successfully");
-			
-			
-			
+			resp.sendRedirect("HomePage.jsp?msg=success");
 		}catch(Exception e) {
+			
 			if(transaction != null) transaction.rollback();
-			JOptionPane.showMessageDialog(null, "Reason of Error::"+ e.getMessage());
 		}
 		
 	}
