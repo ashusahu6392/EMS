@@ -20,11 +20,10 @@ public class Employee {
 	private String phone;
 	private String department;
 	private String designation;
-	private boolean isActive;
 	private double salary;
 	
 	 public Employee() {
-		 this.isActive = true;
+
 	 }
 
 	public Employee(String fname, String lname, String email, String phone, String department, String designation,
@@ -37,7 +36,6 @@ public class Employee {
 		this.department = department;
 		this.designation = designation;
 		this.salary = salary;
-		this.isActive = true;
 	}
 
 	public int getEmp_id() {
@@ -96,14 +94,6 @@ public class Employee {
 		this.designation = designation;
 	}
 
-	public boolean isActive() {
-		return isActive;
-	}
-
-	public void setActive(boolean isActive) {
-		this.isActive = isActive;
-	}
-
 	public double getSalary() {
 		return salary;
 	}
@@ -115,9 +105,9 @@ public class Employee {
 	@Override
 	public String toString() {
 		return "Employee [emp_id=" + emp_id + ", fname=" + fname + ", lname=" + lname + ", email=" + email + ", phone="
-				+ phone + ", department=" + department + ", designation=" + designation + ", isActive=" + isActive
-				+ ", salary=" + salary + "]";
+				+ phone + ", department=" + department + ", designation=" + designation + ", salary=" + salary + "]";
 	}
+
 	
 	
 	 
