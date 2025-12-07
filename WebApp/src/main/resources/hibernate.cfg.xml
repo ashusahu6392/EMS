@@ -13,5 +13,7 @@
         <property name="hibernate.hbm2ddl.auto">update</property>
         <property name="hibernate.show_sql">true</property>
         <property name="hibernate.format_sql">true</property>
+        
+        <mapping class="com.app.entity.Employee"/>
     </session-factory>
 </hibernate-configuration>
