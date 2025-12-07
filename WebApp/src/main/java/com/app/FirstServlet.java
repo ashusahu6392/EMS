@@ -3,6 +3,8 @@ package com.app;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import javax.swing.JOptionPane;
+
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
@@ -57,6 +59,7 @@ public class FirstServlet extends HttpServlet {
 			
 		}catch(Exception e) {
 			if(transaction != null) transaction.rollback();
+			JOptionPane.showMessageDialog(null, "Reason of Error::"+ e.getMessage());
 		}
 		
 	}
