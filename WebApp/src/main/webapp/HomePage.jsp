@@ -82,6 +82,42 @@
 
 <% } %>
     
+    
+    
+    <div class="container mt-5">
+    <div class="row text-center">
+
+        <div class="col-md-3">
+            <div class="card shadow-sm p-3">
+                <h4>Total Employees</h4>
+                <p class="display-6">43</p>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card shadow-sm p-3">
+                <h4>Active Employees</h4>
+                <p class="display-6">41</p>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card shadow-sm p-3">
+                <h4>Departments</h4>
+                <p class="display-6">6</p>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card shadow-sm p-3">
+                <h4>New This Month</h4>
+                <p class="display-6">3</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+    
 
 </body>
 </html>
