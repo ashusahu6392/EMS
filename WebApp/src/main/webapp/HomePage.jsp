@@ -9,12 +9,9 @@
 </head>
 
 <body class="bg-light">
+	<%@ include file="header.jsp" %>
 
-    <nav class="navbar navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand" href="home.jsp">Employee Management System</a>
-        </div>
-    </nav>
+   
 
     <div class="container mt-5">
 
