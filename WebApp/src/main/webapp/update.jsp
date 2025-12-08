@@ -92,7 +92,7 @@
                         <button type="button" class="btn btn-sm btn-secondary" onclick="window.location.reload();">Cancel</button>
                       </div>
                     </td>
-                  </form>
+                  </orm>
                 </tr>
               </c:forEach>
             </tbody>
