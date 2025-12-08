@@ -44,7 +44,7 @@
             <!-- Delete Employee -->
             <div class="col-md-3 mb-3">
                 <!-- redirect to delete page or list page -->
-                <a href="deleteEmployee.jsp" class="btn btn-danger btn-lg w-100">
+                <a href="delete.jsp" class="btn btn-danger btn-lg w-100">
                     ❌ Delete Employee
                 </a>
             </div>
