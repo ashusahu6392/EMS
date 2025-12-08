@@ -93,21 +93,21 @@
             <div class="card-body">
               <h6 class="fw-semibold">Office</h6>
               <p class="mb-1">Employee Management System Pvt. Ltd.</p>
-              <p class="mb-0 text-muted">123, Tech Park, City, Country</p>
+              <p class="mb-0 text-muted">Sector 5, Gomti Nagar, Lucknow, India</p>
             </div>
           </div>
 
           <div class="card mb-3 shadow-sm">
             <div class="card-body">
               <h6 class="fw-semibold">Email</h6>
-              <p class="mb-0"><a href="mailto:support@ems.com">support@ems.com</a></p>
+              <p class="mb-0"><a href="mailto:ashusahu6392@gmail.com">ashusahu6392@gmail.com</a></p>
             </div>
           </div>
 
           <div class="card mb-3 shadow-sm">
             <div class="card-body">
               <h6 class="fw-semibold">Phone</h6>
-              <p class="mb-0">+91 12345 67890</p>
+              <p class="mb-0">+91 6392000833</p>
             </div>
           </div>
         </div>
@@ -116,7 +116,7 @@
         <div class="card shadow-sm">
           <div class="card-body p-0">
             <iframe
-              src="https://www.google.com/maps?q=New+Delhi,+India&output=embed"
+              src="https://maps.app.goo.gl/qRPPg2djvYSu1LdG6?g_st=ac"
               width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
           </div>
         </div>
