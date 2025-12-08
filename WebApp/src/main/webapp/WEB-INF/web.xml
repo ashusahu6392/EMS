@@ -16,4 +16,14 @@
   	<servlet-name>FirstServlet</servlet-name>
   	<url-pattern>/FirstServlet</url-pattern>
   </servlet-mapping>
+  
+  
+   <servlet>
+  	<servlet-name>DeleteServlet</servlet-name>
+  	<servlet-class>com.app.DeleteServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>DeleteServlet</servlet-name>
+  	<url-pattern>/deleteEmp</url-pattern>
+  </servlet-mapping>
 </web-app>
