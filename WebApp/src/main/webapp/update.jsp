@@ -9,7 +9,6 @@
   <meta charset="UTF-8">
   <title>Update Employee</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-
   <style>
     .table-input { border: none; background: transparent; width: 100%; }
     .table-input:focus { outline: none; background: #fff; border: 1px solid #ced4da; border-radius: 4px; padding: 3px; }
@@ -31,10 +30,9 @@
         employees = q.list();
     } catch (Exception e) {
         fetchError = "Error loading employees: " + e.getMessage();
-        // Optional: log to server console
         e.printStackTrace();
     } finally {
-        if (session != null) hsession.close();
+        if (hsession != null) hsession.close();
     }
     request.setAttribute("employees", employees);
     if (fetchError != null) {
@@ -81,7 +79,7 @@
             <!-- LOOP -->
             <c:forEach var="emp" items="${employees}">
               <tr>
-                <!-- Keep one form per row to submit update for that employee -->
+                <!-- One form per row (common pattern) -->
                 <form action="${pageContext.request.contextPath}/UpdateServlet" method="post">
                   <td>
                     <input type="hidden" name="emp_id" value="${emp.emp_id}" />
