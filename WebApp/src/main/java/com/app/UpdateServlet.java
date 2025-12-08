@@ -27,26 +27,44 @@ public class UpdateServlet extends HttpServlet {
         String designation = req.getParameter("designation");
         double salary = Double.parseDouble(req.getParameter("salary"));
 
-        Session session = HibernateUtil.getSessionFactory().openSession();
-        Transaction tx = session.beginTransaction();
+        Session session = null;
+        Transaction tx = null;
+        try {
+            session = HibernateUtil.getSessionFactory().openSession();
+            tx = session.beginTransaction();
 
-        Employee emp = session.get(Employee.class, id);
+            Employee emp = session.get(Employee.class, id);
 
-        emp.setFname(fname);
-        emp.setLname(lname);
-        emp.setEmail(email);
-        emp.setPhone(phone);
-        emp.setDepartment(department);
-        emp.setDesignation(designation);
-        emp.setSalary(salary);
+            if (emp == null) {
+                req.setAttribute("message", "Employee with id " + id + " not found.");
+                // forward back to the same JSP so list still displays
+                req.getRequestDispatcher("/update.jsp").forward(req, resp);
+                return;
+            }
 
-        session.merge(emp);
-        tx.commit();
-        session.close();
+            emp.setFname(fname);
+            emp.setLname(lname);
+            emp.setEmail(email);
+            emp.setPhone(phone);
+            emp.setDepartment(department);
+            emp.setDesignation(designation);
+            emp.setSalary(salary);
 
-        req.setAttribute("message", "Employee Updated Successfully!");
+            // update/merge/saveOrUpdate are fine here; using merge as before
+            session.merge(emp);
 
-        // Reload list page
-        req.getRequestDispatcher("ListEmployeesForUpdate").forward(req, resp);
+            tx.commit();
+
+            req.setAttribute("message", "Employee Updated Successfully!");
+        } catch (Exception e) {
+            if (tx != null) tx.rollback();
+            e.printStackTrace();
+            req.setAttribute("message", "Error updating employee: " + e.getMessage());
+        } finally {
+            if (session != null) session.close();
+        }
+
+        // Forward back to the same JSP (which fetches the employees again)
+        req.getRequestDispatcher("/update.jsp").forward(req, resp);
     }
 }
