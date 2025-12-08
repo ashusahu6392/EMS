@@ -28,16 +28,7 @@
   </servlet-mapping>
   
   
-    <servlet>
-    <servlet-name>ListEmployeesForUpdate</servlet-name>
-    <servlet-class>com.app.ListEmployeesForUpdate</servlet-class>
-  </servlet>
-
-  <servlet-mapping>
-    <servlet-name>ListEmployeesForUpdate</servlet-name>
-    <url-pattern>/ListEmployeesForUpdate</url-pattern>
-  </servlet-mapping>
-
+ 
   <!-- Update Employee -->
   <servlet>
     <servlet-name>UpdateServlet</servlet-name>
