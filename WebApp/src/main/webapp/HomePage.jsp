@@ -28,7 +28,7 @@
 
             <!-- View Employees -->
             <div class="col-md-3 mb-3">
-                <a href="view" class="btn btn-success btn-lg w-100">
+                <a href="view.jsp" class="btn btn-success btn-lg w-100">
                     👁️ View Employees
                 </a>
             </div>

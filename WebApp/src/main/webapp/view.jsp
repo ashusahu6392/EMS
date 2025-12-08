@@ -24,8 +24,8 @@
 
     <%
         List<Employee> empList = null;
-        try (Session session = HibernateUtil.getSessionFactory().openSession()) {
-            Query<Employee> query = session.createQuery("from Employee", Employee.class);
+        try (Session hsession = HibernateUtil.getSessionFactory().openSession()) {
+            Query<Employee> query = hsession.createQuery("from Employee", Employee.class);
             empList = query.list();
         } catch (Exception e) {
             e.printStackTrace();
@@ -51,7 +51,7 @@
                 for (Employee emp : empList) {
         %>
             <tr>
-                <td><%= emp.getId() %></td>
+                <td><%= emp.getEmp_id() %></td>
                 <td><%= emp.getFname() %></td>
                 <td><%= emp.getLname() %></td>
                 <td><%= emp.getEmail() %></td>

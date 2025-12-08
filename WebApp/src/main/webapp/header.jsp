@@ -36,7 +36,7 @@
           <a class="nav-link fw-medium" href="createEmp.jsp"><i class="bi bi-person-plus-fill me-1"></i>Create</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link fw-medium" href="viewEmployees.jsp"><i class="bi bi-eye-fill me-1"></i>View</a>
+          <a class="nav-link fw-medium" href="view.jsp"><i class="bi bi-eye-fill me-1"></i>View</a>
         </li>
         <li class="nav-item">
           <a class="nav-link fw-medium" href="updateEmp.jsp"><i class="bi bi-pencil-fill me-1"></i>Update</a>
