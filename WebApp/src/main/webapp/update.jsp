@@ -5,8 +5,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Update Employee</title>
-  <!-- Bootstrap CSS (use your version/location) -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
     .table-input { border: none; background: transparent; width: 100%; }
     .table-input:focus { outline: none; background: #fff; border: 1px solid #ced4da; border-radius: 4px; padding: 3px; }
@@ -24,9 +23,14 @@
           <a href="HomePage.jsp" class="btn btn-outline-secondary">Back to Home</a>
         </div>
 
-        <!-- Feedback message (set by servlet as request attribute "message") -->
-        <c:if test="${not empty message}">
-          <div class="alert alert-info">${message}</div>
+        <!-- Feedback: prefer request attribute; if session used, check both -->
+        <c:if test="${not empty requestScope.message}">
+          <div class="alert alert-info">${requestScope.message}</div>
+        </c:if>
+        <c:if test="${empty requestScope.message and not empty sessionScope.message}">
+          <div class="alert alert-info">${sessionScope.message}</div>
+          <!-- optionally clear session message -->
+          <c:remove var="message" scope="session"/>
         </c:if>
 
         <div class="table-responsive">
@@ -45,12 +49,9 @@
               </tr>
             </thead>
             <tbody>
-              <!-- 'employees' should be set by controller/servlet as request attribute (List<Employee>) -->
               <c:forEach var="emp" items="${employees}">
                 <tr>
-                  <!-- each row is a form so update affects only that employee -->
-                  <form action="UpdateServlet" method="post">
-                    <!-- emp_id hidden -->
+                  <form action="${pageContext.request.contextPath}/UpdateServlet" method="post">
                     <td>
                       <input type="hidden" name="emp_id" value="${emp.emp_id}" />
                       ${emp.emp_id}
@@ -73,7 +74,6 @@
                     </td>
 
                     <td>
-                      <!-- You can replace with select if you have fixed departments -->
                       <input name="department" class="table-input" value="${emp.department}" />
                     </td>
 
@@ -88,13 +88,19 @@
                     <td>
                       <div class="d-flex gap-2">
                         <button type="submit" class="btn btn-sm btn-primary" onclick="return confirm('Update this employee?')">Update</button>
-                        <!-- optional: a Cancel button to reload the page / revert -->
                         <button type="button" class="btn btn-sm btn-secondary" onclick="window.location.reload();">Cancel</button>
                       </div>
                     </td>
                   </form>
                 </tr>
               </c:forEach>
+
+              <!-- If there are no employees -->
+              <c:if test="${empty employees}">
+                <tr>
+                  <td colspan="9" class="text-center">No employees found.</td>
+                </tr>
+              </c:if>
             </tbody>
           </table>
         </div> <!-- table-responsive -->
