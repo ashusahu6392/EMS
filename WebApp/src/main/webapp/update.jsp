@@ -1,4 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page import="java.util.List, java.util.ArrayList" %>
+<%@ page import="org.hibernate.Session, org.hibernate.query.Query" %>
+<%@ page import="com.app.util.HibernateUtil, com.app.entity.Employee" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
@@ -17,13 +20,35 @@
 
 <%@ include file="header.jsp" %>
 
+<%
+    // Fetch employees from DB using Hibernate and place in request attribute
+    List<Employee> employees = new ArrayList<>();
+    String fetchError = null;
+    Session hsession = null;
+    try {
+        hsession = HibernateUtil.getSessionFactory().openSession();
+        Query<Employee> q = hsession.createQuery("from Employee", Employee.class);
+        employees = q.list();
+    } catch (Exception e) {
+        fetchError = "Error loading employees: " + e.getMessage();
+        // Optional: log to server console
+        e.printStackTrace();
+    } finally {
+        if (session != null) hsession.close();
+    }
+    request.setAttribute("employees", employees);
+    if (fetchError != null) {
+        request.setAttribute("message", fetchError);
+    }
+%>
+
 <div class="container">
   <div class="card shadow-sm">
     <div class="card-body">
 
       <div class="d-flex justify-content-between align-items-center mb-3">
         <h3>Update Employee</h3>
-        <a href="HomePage.jsp" class="btn btn-outline-secondary">Back to Home</a>
+        <a href="${pageContext.request.contextPath}/HomePage.jsp" class="btn btn-outline-secondary">Back to Home</a>
       </div>
 
       <!-- Show success / error message -->
@@ -48,7 +73,6 @@
           </thead>
 
           <tbody>
-
             <!-- IF EMPTY -->
             <c:if test="${empty employees}">
               <tr><td colspan="9" class="text-center">No employees found.</td></tr>
@@ -57,11 +81,10 @@
             <!-- LOOP -->
             <c:forEach var="emp" items="${employees}">
               <tr>
-                <form action="UpdateServlet" method="post">
-
-                  <!-- Hidden ID -->
+                <!-- Keep one form per row to submit update for that employee -->
+                <form action="${pageContext.request.contextPath}/UpdateServlet" method="post">
                   <td>
-                    <input type="hidden" name="emp_id" value="${emp.emp_id}">
+                    <input type="hidden" name="emp_id" value="${emp.emp_id}" />
                     ${emp.emp_id}
                   </td>
 
@@ -71,12 +94,11 @@
                   <td><input name="phone" class="table-input" value="${emp.phone}" /></td>
                   <td><input name="department" class="table-input" value="${emp.department}" /></td>
                   <td><input name="designation" class="table-input" value="${emp.designation}" /></td>
-                  <td><input name="salary" class="table-input" value="${emp.salary}" /></td>
+                  <td><input name="salary" class="table-input" type="number" step="0.01" value="${emp.salary}" /></td>
 
                   <td>
                     <button type="submit" class="btn btn-primary btn-sm">Update</button>
                   </td>
-
                 </form>
               </tr>
             </c:forEach>
