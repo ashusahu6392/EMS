@@ -36,7 +36,7 @@
             <!-- Update Employee -->
             <div class="col-md-3 mb-3">
                 <!-- You will later create updateEmployee.jsp or servlet -->
-                <a href="updateEmployee.jsp" class="btn btn-warning btn-lg w-100">
+                <a href="update.jsp" class="btn btn-warning btn-lg w-100">
                     ✏️ Update Employee
                 </a>
             </div>
