@@ -39,7 +39,7 @@
           <a class="nav-link fw-medium" href="view.jsp"><i class="bi bi-eye-fill me-1"></i>View</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link fw-medium" href="updateEmp.jsp"><i class="bi bi-pencil-fill me-1"></i>Update</a>
+          <a class="nav-link fw-medium" href="update.jsp"><i class="bi bi-pencil-fill me-1"></i>Update</a>
         </li>
         <li class="nav-item">
           <a class="nav-link fw-medium text-danger" href="delete.jsp"><i class="bi bi-x-circle-fill me-1"></i>Delete</a>
