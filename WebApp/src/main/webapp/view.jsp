@@ -72,6 +72,37 @@
         %>
         </tbody>
     </table>
+    
+    <!-- Delete Employee Section -->
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        
+        <!-- Delete Form -->
+        <div class="col-md-4">
+            <h4>Delete Employee</h4>
+            <form action="DeleteServlet" method="post" class="d-flex">
+                <input type="number" name="emp_id" class="form-control" placeholder="Enter Employee ID" required>
+                <button type="submit" class="btn btn-danger ms-2">Delete</button>
+            </form>
+        </div>
+
+        <!-- Success / Error Message (Right Side) -->
+        <div class="col-md-4">
+            <%
+                String msg = (String) request.getAttribute("msg");
+                if(msg != null){
+            %>
+                <div class="alert alert-success mt-2">
+                    <%= msg %>
+                </div>
+            <% 
+                }
+            %>
+        </div>
+
+    </div>
+</div>
+    
 
     <div class="text-center">
         <a href="HomePage.jsp" class="btn btn-primary">Back to Home</a>
