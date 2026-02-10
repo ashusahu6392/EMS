@@ -276,10 +276,6 @@ If you want, I can:
 
 ## Contact
 
-For questions or portfolio requests, email: `Ashusahu6392@gmil.com` (replace with your email).
+For questions or portfolio requests, email: `Ashusahu6392@gmil.com`.
 
----
 
-*Make sure to replace placeholders like `<YOUR_GITHUB_USERNAME>` and `<REPO_NAME>` with real values.*
-
-*Happy coding — this repo is ready for a professional polish!*
