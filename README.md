@@ -9,34 +9,31 @@
 A clean, production-oriented **Employee Management System (EMS)** — a Java web application using Servlets, JSP, Hibernate (JPA), and MySQL. Designed to be easy to run locally and simple to extend for learning or portfolio use.
 
 ---
-
-## Demo
-
 ## Demo
 
 ### Screenshot 1  
-![](docs/screenshots/shot1.jpg)
+![](docs/shot1.png)
 
 ### Screenshot 2  
-![](docs/screenshots/shot2.jpg)
+![](docs/shot2.png)
 
 ### Screenshot 3  
-![](docs/screenshots/shot3.jpg)
+![](docs/shot3.png)
 
 ### Screenshot 4  
-![](docs/screenshots/shot4.png)
+![](docs/shot4.png)
 
 ### Screenshot 5  
-![](docs/screenshots/shot5.png)
+![](docs/shot5.png)
 
 ### Screenshot 6  
-![](docs/screenshots/shot6.png)
+![](docs/shot6.png)
 
 ### Screenshot 7  
-![](docs/screenshots/shot7.png)
+![](docs/shot7.png)
 
 ### Screenshot 8  
-![](docs/screenshots/shot8.png)
+![](docs/shot8.png)
 
 
 ---
