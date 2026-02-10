@@ -12,21 +12,32 @@ A clean, production-oriented **Employee Management System (EMS)** — a Java web
 
 ## Demo
 
-![](docs/demo-placeholder.png)
+## Demo
 
-> Replace `docs/demo-placeholder.png` with real screenshots (place them inside the `docs/` folder).
+### Screenshot 1  
+![](docs/screenshots/shot1.jpg)
 
----
+### Screenshot 2  
+![](docs/screenshots/shot2.jpg)
 
-## Why this repo looks professional
+### Screenshot 3  
+![](docs/screenshots/shot3.jpg)
 
-This repository includes everything a hiring manager or peer reviewer expects:
+### Screenshot 4  
+![](docs/screenshots/shot4.png)
 
-* A clear, concise README with quick start and architecture overview
-* CI pipeline to run `mvn test` (GitHub Actions)
-* Standard `.gitignore` and a `LICENSE` (MIT)
-* CONTRIBUTING and templates for Issues / PRs
-* Screenshots and example `WAR` deployment instructions
+### Screenshot 5  
+![](docs/screenshots/shot5.png)
+
+### Screenshot 6  
+![](docs/screenshots/shot6.png)
+
+### Screenshot 7  
+![](docs/screenshots/shot7.png)
+
+### Screenshot 8  
+![](docs/screenshots/shot8.png)
+
 
 ---
 
