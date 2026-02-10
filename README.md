@@ -1,8 +1,9 @@
 # Employee Management System (EMS)
 
-[![Build Status](https://img.shields.io/github/actions/workflow/status/<YOUR_GITHUB_USERNAME>/<REPO_NAME>/maven.yml?branch=main)](https://github.com/<YOUR_GITHUB_USERNAME>/<REPO_NAME>/actions)
-[![Language](https://img.shields.io/github/languages/top/<YOUR_GITHUB_USERNAME>/<REPO_NAME>)](https://github.com/<YOUR_GITHUB_USERNAME>/<REPO_NAME>)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/ashusahu6392/EMS/maven.yml?branch=main)](https://github.com/ashusahu6392/EMS/actions)
+[![Language](https://img.shields.io/github/languages/top/ashusahu6392/EMS)](https://github.com/ashusahu6392/EMS)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
+
 
 A clean, production-oriented **Employee Management System (EMS)** — a Java web application using Servlets, JSP, Hibernate (JPA), and MySQL. Designed to be easy to run locally and simple to extend for learning or portfolio use.
 
@@ -151,7 +152,7 @@ logs/
 ```
 MIT License
 
-Copyright (c) 2025 <YOUR NAME>
+Copyright (c) 2026 <Ashu Sahu>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -160,7 +161,7 @@ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 copies of the Software, and to permit persons to whom the Software is
 furnished to do so, subject to the following conditions:
 
-[Full MIT text — paste into LICENSE file]
+
 ```
 
 ### `CONTRIBUTING.md` (short)
