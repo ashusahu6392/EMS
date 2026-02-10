@@ -1,8 +1,9 @@
 # Employee Management System (EMS)
 
-[![Build Status](https://img.shields.io/github/actions/workflow/status/ashusahu6392/EMS/maven.yml?branch=main)](https://github.com/ashusahu6392/EMS/actions)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/ashusahu6392/EMS/maven-publish.yml?branch=master)](https://github.com/ashusahu6392/EMS/actions)
 [![Language](https://img.shields.io/github/languages/top/ashusahu6392/EMS)](https://github.com/ashusahu6392/EMS)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
+
 
 
 A clean, production-oriented **Employee Management System (EMS)** — a Java web application using Servlets, JSP, Hibernate (JPA), and MySQL. Designed to be easy to run locally and simple to extend for learning or portfolio use.
