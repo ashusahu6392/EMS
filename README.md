@@ -29,11 +29,6 @@ A clean, production-oriented **Employee Management System (EMS)** — a Java web
 ### Screenshot 6  
 ![](docs/shot6.png)
 
-### Screenshot 7  
-![](docs/shot7.png)
-
-### Screenshot 8  
-![](docs/shot8.png)
 
 
 ---
